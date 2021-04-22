@@ -1,4 +1,6 @@
-# MyFirstApp
+# angularPractcice
+---
+Nothing to see here. This is a project created to follow along with a Udemy course.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.8.
 
