@@ -7,13 +7,30 @@
     type="text"
     class="form-control"
     [(ngModel)]='serverName'>
-<p>{{ serverName }}</p>
+<!-- <p>{{ serverName }}</p> -->
 <button 
     class="btn btn-primary"
     [disabled]="!allowNewServer"
     (click)="onCreateServer()">Add Server</button>
 <!-- <p [innerText]='allowNewServer'></p> -->
-<p>{{ serverCreationStatus }}</p>
+<!-- <p>{{ serverCreationStatus }}</p> -->
+<p *ngIf="serverCreated">server was created, server name is {{ serverName }} </p>
+<app-server *ngFor="let server of servers"></app-server>
 
-<app-server></app-server>
-<app-server></app-server>
+
+
+
+
+<!-- <hr>
+ This function is a form accepting a user's name as input. 
+It uses two-way data binding to output the username as the user is typing it.
+If the username box is empty, the proceeding button will be disabled.
+    If it is not empty, it will be enabled.
+When the user clicks the button it resets the username form input box. 
+<label>user name</label>
+<input type="text" class="form-control" [(ngModel)]='username'>
+<p>{{ username }}</p>
+<button
+class="btn btn-primary"
+[disabled]="username === ''"
+(click)="username = ''">reset user</button> -->
